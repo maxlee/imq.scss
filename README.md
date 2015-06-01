@@ -1,7 +1,11 @@
-# imq.scss
+# _imq.scss
+Sass Media Queries including iOS devices.
 
-## Input
-``` sass
+## Example:
+
+### Input:
+
+```scss
 body {
     width: 100%;
     @include media(iphone5){
@@ -9,9 +13,9 @@ body {
     }
 }
 ```
+### Output:
 
-## Output
-``` css
+```css
 body {
     width: 100%;
 }
@@ -21,3 +25,7 @@ body {
     }
 }
 ```
+
+### License:
+
+The MIT license
