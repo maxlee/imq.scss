@@ -1,1 +1,23 @@
 # imq.scss
+
+## Input
+``` sass
+body {
+    width: 100%;
+    @include media(iphone5){
+        width: 640px;
+    }
+}
+```
+
+## Output
+``` css
+body {
+    width: 100%;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) {
+    body {
+        width: 640px;
+    }
+}
+```

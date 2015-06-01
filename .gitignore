@@ -1,2 +1,7 @@
 .sass-cache
 *.css.map
+gulpfile.js
+package.json
+node_modules
+test.css
+test.scss

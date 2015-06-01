@@ -1,0 +1,50 @@
+//
+// _imq.scss
+//
+
+/*
+// Input:
+body {
+    width: 100%;
+    @include media(iphone5){
+        width: 640px;
+    }
+}
+
+// Output:
+body {
+    width: 100%;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) {
+    body {
+        width: 640px;
+    }
+}
+*/
+
+@mixin media($type) {
+
+    // iPhone 4 & 4s
+    $iphone4: "only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5)";
+    // iPhone 5 & 5s
+    $iphone5: "only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2)";
+    // iPhone 6
+    $iphone6: "only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2)";
+    // iPhone 6 Plus
+    $iphone6p: "only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3)";
+
+
+    @if $type == iphone4 {
+        @media #{$iphone4} { @content; }
+    }
+    @else if $type==iphone5 {
+        @media #{$iphone5} { @content; }
+    }
+    @else if $type==iphone6 {
+        @media #{$iphone6} { @content; }
+    }
+    @else if $type==iphone6p {
+        @media #{$iphone6p} { @content; }
+    }
+
+}
