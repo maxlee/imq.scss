@@ -1,6 +1,11 @@
 # _imq.scss
 Sass Media Queries including iOS devices.
 
+## Get started
+```scss
+@import "imq";
+```
+
 ## Example:
 
 ### Input:
@@ -8,7 +13,7 @@ Sass Media Queries including iOS devices.
 ```scss
 body {
     width: 100%;
-    @include media(iphone5){
+    @include media(iphone5) {
         width: 640px;
     }
 }

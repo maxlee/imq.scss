@@ -33,17 +33,16 @@ body {
     // iPhone 6 Plus
     $iphone6p: "only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3)";
 
-
     @if $type == iphone4 {
         @media #{$iphone4} { @content; }
     }
-    @else if $type==iphone5 {
+    @else if $type == iphone5 {
         @media #{$iphone5} { @content; }
     }
-    @else if $type==iphone6 {
+    @else if $type == iphone6 {
         @media #{$iphone6} { @content; }
     }
-    @else if $type==iphone6p {
+    @else if $type == iphone6p {
         @media #{$iphone6p} { @content; }
     }
 
